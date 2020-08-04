@@ -3,4 +3,15 @@ body {
     background: black;
     color: white;
   }
+  input {
+    background: grey;
+    font-size: 18px;
+  }
   
+  form {
+    display: inline-block;
+  }
+  
+  .centered {
+    text-align: center;
+  }
