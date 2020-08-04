@@ -9,7 +9,7 @@ body {
     color: white;
   }
   input {
-    background: grey;
+    background: rgb(212, 215, 216);
     font-size: 18px;
   }
   
@@ -17,9 +17,13 @@ body {
     display: inline-block;
   }
   
-.row {
-  display: flex;
-}
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
 
 .column {
   flex: 33.33%;
@@ -35,8 +39,14 @@ body {
   clear: both;
   display: table;
 }
+#locations{
   
-
+  float: right;
+} 
+.row-form{
+  float: right;
+  align-items: right;
+}
 
 
 
