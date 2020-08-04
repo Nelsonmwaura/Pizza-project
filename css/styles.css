@@ -9,7 +9,7 @@ body {
     color: white;
   }
   input {
-    background: rgb(212, 215, 216);
+    background: rgb(255, 255, 255);
     font-size: 18px;
   }
   
@@ -24,7 +24,16 @@ body {
   .row {
     display: flex;
   }
-
+.jumbotron{
+  color: black;
+}
+.card-body{
+  
+}
+#ContactUs{
+  text-align:center;
+  background-color: whitesmoke;
+}
 .column {
   flex: 33.33%;
   padding: 5px;
@@ -47,8 +56,9 @@ body {
   float: right;
   align-items: right;
 }
-
-
+#footer{
+  text-align: center;
+}
 
 
 
