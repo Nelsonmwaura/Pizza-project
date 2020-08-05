@@ -59,8 +59,12 @@ body {
 #footer{
   text-align: center;
 }
-
-
+.order{
+  text-align: right;
+}
+#information{
+  text-align: right;
+}
 
 @media screen and (max-width: 500px) {
   .column {
