@@ -57,7 +57,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <form>
-                                                <div class="alert alert-warning" role="alert">Choose your toppings:
+                                                <div class="alert alert-warning" role="alert">Available toppings:
                                                     <h2 style="text-align: center"></h2>
                                                     <select id="Toppings" onchange="preferedToppings()">
                                                         <option value="Pepperoni.">Pepperoni.</option>
@@ -147,6 +147,126 @@
                     </div>
                 </div>
             </div>
+            <div class="container-fluid order" id="make-order">
+                <div class="order-overlay">
+                    <div class="controls-top text-center" id="Order-now">
+                        <h2>Select your art Here</h2>
+                    </div>
+                    <h2>Order your art here and we will deliver it to you at your door step!</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <form action="">
+                                <label for="select">What does your taste-buds desire</label>
+                                <select class="browser-default custom-select custom-select-md mb-3 name">
+                                    <!-- <option selected value="choose">Choose your flavor</option> -->
+                                    <option value="Margherita">Margherita</option>
+                                    <option value="Bianca">Bianca</option>
+                                    <option value="Montanara">Montanara</option>
+                                    <option value="Alla vodka">Alla vodka</option>
+                                    <option value="Melanze">Melanze</option>
+                                    <option value="Broccoli sausage">Broccoli sausage</option>
+                                    <option value="Pesto">Pesto</option>
+                                    <option value="Meatball ricotta">Meatball ricotta</option>
+                                    <option value="Fig & mascarpone">Fig & mascarpone</option>
+                                    <option value="Saporita">Saporita</option>
+                                    <option value="Margherita">Margherita</option>
+                                </select>
+                                <label for="select">Select Size</label>
+                                <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                                    <option selected value="0">Select size here</option>
+                                    <option value="large">Large -- sh. 1200</option>
+                                    <option value="medium">Medium -- sh. 850</option>
+                                    <option value="small">Small -- sh. 600</option>
+                                </select>
+                                <label for="crust">Choose your favorite Crust!</label>
+                                <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                                    <option selected value="0">Select your preferred crust!</option>
+                                    <option value="Crispy">Crispy -- sh. 200</option>
+                                    <option value="Stuffed">Stuffed -- sh. 150</option>
+                                    <option value="Gluten-free">Gluten-free-- sh. 180</option>
+                                </select>
+                                <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Sausage">Sausage</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Black olives."
+                                        value="Black olives." name="toppings">
+                                    <label class="custom-control-label" for="Sausage">Sausage</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Bacon">Bacon</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms"
+                                        name="toppings">
+                                    <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                                </div>
+                                <br><br>
+                                <button type="submit" class="btn btn-light proceed">Proceed</button>
+
+                            </form>
+                        </div>
+                        <div class="col-sm-7">
+                            <div id="information">
+                                <p>Your order will be processed and delivered within one hour of placing.</p>
+                                <p>Make sure you have the total amout for the order during order delivery delivery.</p>
+                                <p>Incase of any comment of complaint, Please reach out to us as fast as possible.</p>
+                                <p id="regards">Regards, Management</p>
+                            </div>
+                            <div class="choise">
+                                <h2>Your Order is:</h2>
+                                <div id="your-orders">
+                                    <table class="table table-sm  pizzatable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Size</th>
+                                                <th scope="col">Crust</th>
+                                                <th scope="col">Topping</th>
+                                                <th scope="col">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ordersmade">
+                                            <tr>
+                                                <td id="pizzaname"></td>
+                                                <td id="pizzasize"></td>
+                                                <td id="pizzacrust"></td>
+                                                <td id="pizzatopping"></td>
+                                                <td id="totals"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p id="pizzatotal"></p>
+                                    <p id="totalbill"></p>
+                                    <p id="addedprice">Delivery will cost $20</p>
+                                    <p id="finalmessage"></p>
+                                </div>
+                                <button class="btn btn-orange addPizza">Add art</button>
+                                <button class="btn btn-orange" id="checkout">Checkout</button>
+                                <button class="btn btn-orange deliver">Home delivery?</button>
+                            </div>
+                            <div class="delivery">
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                                        <input type="number" id="phone" class="form-control mb-3"
+                                            placeholder="Pnone Number">
+                                        <input type="text" id="location" class="form-control mb-3"
+                                            placeholder="Location for delivery">
+                                        <button class="btn btn-orange" id="final-order">Place Order</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="Order" class="row">
                 <div class="row">
                     <div class="alert alert-secondary" role="alert">
