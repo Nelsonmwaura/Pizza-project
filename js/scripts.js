@@ -38,7 +38,34 @@ $(document).ready(function () {
             default:
                 console.log("error");
         }
-
+        switch(pcrust){
+            case "0":
+              crust_price = 0;
+            break;
+            case "Cheese-Stuffed Crust":
+              crust_price = 3;
+            break;
+            case "Pizza Bagels":
+              crust_price = 2;
+            break;
+            case "Thin Crust":
+              crust_price = 1;
+            break;
+            case "Flatbread":
+              crust_price = 1;
+            break;
+            case "Thin Crust":
+              crust_price = 1;
+            break;
+            case "Sicilian Style":
+              crust_price = 2;
+            break;
+            case "Chicago Deep Dish":
+              crust_price = 2;
+            break;
+            default:
+              console.log("No price"); 
+          }
         let topping_value = ptopping.length * 50;
         console.log("toppins value" + topping_value);
 
