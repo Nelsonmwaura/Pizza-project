@@ -4,9 +4,10 @@
   float: left;
 }
 body {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: black;
     color: white;
+    text-align: center;
   }
   input {
     background: rgb(255, 255, 255);
