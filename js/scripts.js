@@ -36,6 +36,31 @@ $(document).ready(function () {
             default:
                 console.log("error");
         }
+        switch (ptopping) {
+            case "0":
+                topping_value = 0;
+                break;
+            case "Extra cheese":
+                topping_value = 3;
+                break;
+            case "Black olives":
+                topping_value = 2;
+                break;
+            case "Onions":
+                topping_value = 1;
+                break;
+            case "Sausage":
+                topping_value = 1;
+                break;
+            case "Spinach":
+                topping_value = 2;
+                break;
+            case "Green peppers":
+                topping_value = 2;
+                break;
+            default:
+                console.log("No price");
+        }
         switch (pcrust) {
             case "0":
                 crust_price = 0;
@@ -116,6 +141,31 @@ $(document).ready(function () {
                 default:
                     console.log("error");
             }
+            switch (ptopping) {
+                case "0":
+                    topping_value = 0;
+                    break;
+                case "Extra cheese":
+                    topping_value = 3;
+                    break;
+                case "Black olives":
+                    topping_value = 2;
+                    break;
+                case "Onions":
+                    topping_value = 1;
+                    break;
+                case "Sausage":
+                    topping_value = 1;
+                    break;
+                case "Spinach":
+                    topping_value = 2;
+                    break;
+                case "Green peppers":
+                    topping_value = 2;
+                    break;
+                default:
+                    console.log("No price");
+            }
             switch (pcrust) {
                 case "0":
                     crust_price = 0;
@@ -174,15 +224,13 @@ $(document).ready(function () {
             $("#pizzatotal").append("Your bill is $. " + checkoutTotal);
         });
 
-
-
         $("button#final-order").click(function (event) {
             event.preventDefault();
 
             $("#pizzatotal").hide();
             $(".delivery").hide();
             $("button#final-order").hide();
-            let deliveryamount = checkoutTotal + 2;
+            let deliveryamount = checkoutTotal + 150;
             console.log("Final Bill is: " + deliveryamount);
             let person = $("input#name").val();
             let phone = $("input#phone").val();
@@ -190,7 +238,7 @@ $(document).ready(function () {
 
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val() != "") {
 
-                $("#finallmessage").append(person + ", We have recieved your order and it will be delivered to you at " + location + ". Prepare sh. " + deliveryamount);
+                $("#finallmessage").append(person + ", We have recieved your order and it will be delivered to you at " + location + ". Prepare $. " + deliveryamount);
                 $("#totalbill").hide();
                 $("#finallmessage").slideDown(1200);
             }
