@@ -1,4 +1,4 @@
-var price, crust_price, topping_price;
+var price, topping_price, crust_price;
 let total = 0;
 function Getpizza(name, size, topping, crust, total) {
     this.name = name;
@@ -11,8 +11,8 @@ $(document).ready(function () {
     $("button.proceed").click(function (event) {
         let pname = $(".name option:selected").val();
         let psize = $("#size option:selected").val();
-        let pcrust = $("#crust option:selected").val();
         let ptopping = [];
+        let pcrust = $("#crust option:selected").val();
         $.each($("input[name='toppings']:checked"), function () {
             ptopping.push($(this).val());
         });
@@ -94,7 +94,7 @@ $(document).ready(function () {
             $("button.proceed").show();
             $("#information").show();
             $("div.choice").hide();
-            alert("Please select pizza size and crust");
+            alert("Please select pizza size, topping and crust");
         }
         else {
             $("button.proceed").hide();
@@ -102,23 +102,24 @@ $(document).ready(function () {
             $("div.choice").slideDown(1000);
         }
 
-        total = price + crust_price + topping_value;
+        total = price + topping_value + crust_price;
         console.log(total);
         let checkoutTotal = 0;
         checkoutTotal = checkoutTotal + total;
 
         $("#pizzaname").html($(".name option:selected").val());
         $("#pizzasize").html($("#size option:selected").val());
+        $("#pizzatopping").html($("#topping option:selected").val());
         $("#pizzacrust").html($("#crust option:selected").val());
-        $("#pizzatopping").html(ptopping.join(", "));
         $("#totals").html(total);
 
         // Add pizza button
         $("button.addPizza").click(function () {
             let pname = $(".name option:selected").val();
             let psize = $("#size option:selected").val();
-            let pcrust = $("#crust option:selected").val();
             let ptopping = [];
+            let pcrust = $("#crust option:selected").val();
+
             $.each($("input[name='toppings']:checked"), function () {
                 ptopping.push($(this).val());
             });
@@ -230,7 +231,7 @@ $(document).ready(function () {
             $("#pizzatotal").hide();
             $(".delivery").hide();
             $("button#final-order").hide();
-            let deliveryamount = checkoutTotal + 150;
+            let deliveryamount = checkoutTotal + 2;
             console.log("Final Bill is: " + deliveryamount);
             let person = $("input#name").val();
             let phone = $("input#phone").val();
