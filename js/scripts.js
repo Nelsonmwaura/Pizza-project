@@ -199,16 +199,16 @@ $(document).ready(function () {
             checkoutTotal = checkoutTotal + total;
             console.log(checkoutTotal);
             var newOrder = new Getpizza(pname, psize, ptopping, pcrust, total);
-            $("#ordersmade").append('<tr><td id="pizzaname">' + newOrder.name + '</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="pizzatopping">' + newOrder.topping + '</td><td id="totals">' + newOrder.total + '</td></tr>');
+            $("#ordersmade").append('<tr><td id="pizzaname">' + newOrder.name + '</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzatopping">' + newOrder.topping + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="totals">' + newOrder.total + '</td></tr>');
             console.log(newOrder);
         });
 
-        $("button.deliver").click(function () {
+        $("button.delivery").click(function () {
             $(".pizzatable").hide();
             $(".choise h2").hide();
             $(".delivery").slideDown(1000);
             $("#addedprice").hide();
-            $("button.deliver").hide();
+            $("button.delivery").hide();
             $("#pizzatotal").hide();
             let deliveryamount = checkoutTotal + 2;
             console.log("You will pay $. " + deliveryamount + " on delivery");
@@ -219,7 +219,7 @@ $(document).ready(function () {
         $("button#checkout").click(function () {
             $("button#checkout").hide();
             $("button.addPizza").hide();
-            $("button.deliver").slideDown(1000);
+            $("button.delivery").slideDown(1000);
             $("#addedprice").slideDown(1000);
             console.log("Your total bills is $. " + checkoutTotal);
             $("#pizzatotal").append("Your bill is $. " + checkoutTotal);
